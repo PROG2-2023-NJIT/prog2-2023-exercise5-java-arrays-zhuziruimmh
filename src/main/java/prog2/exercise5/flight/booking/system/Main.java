@@ -25,7 +25,7 @@ public class Main
         int result = fb.getTotalPassengers();
         fb.setTotalPassengers(1,3);
         fb.setPassengerFullName("John Doe");
-        fb.setTicketNumber();
+        fb.setTicketNumber(result);
         fb = new FlightBooking(null, null, null, 0, 0);
         fb.setTripSource("2") ;
         fb.setTripDestination("OULU"," Helsinki");
@@ -35,7 +35,7 @@ public class Main
 
         System.out.println("Dear " + fb.getPassengerFullName() + ". Thank you for booking your flight with " +
                 fb.getFlightCompany() + ".\n Following are the details of your booking and the trip:" + "\n" +
-                "Ticket Number: " + fb.getTicketNumber() + "\n" +
+                "Ticket Number: " + fb.getTicketNumber(result) + "\n" +
                 "From " + fb.getTripSource() + " to " + fb.getTripDestination() + "\n" +
                 "Date of departure: " + fb.getDepartureDate() + "\n" +
                 "Date of return: " + fb.getReturnDate() + "\n" +
@@ -43,7 +43,6 @@ public class Main
                 "Total ticket price in Euros: " + fb.getTotalTicketPrice());
 
      }
-
-        
     }
+
 
